@@ -79,7 +79,7 @@ The final Random Forest model, after hyperparameter tuning, gave a solid improve
 
 1. Clone this repo
    ```bash
-   git clone https://github.com/<your-username>/Titanic_Survivor_Prediction.git
+   git clone https://github.com/Rehan-0112/Titanic_Survivor_Prediction.git
    cd Titanic_Survivor_Prediction
    ```
 2. Install dependencies
