@@ -79,17 +79,17 @@ The final Random Forest model, after hyperparameter tuning, gave a solid improve
 
 1. Clone this repo
    ```bash
-   git clone https://github.com/Rehan-0112/Titanic_Survivor_Prediction.git
-   cd Titanic_Survivor_Prediction
+   git clone https://github.com/Rehan-0112/Titanic-Survivor-Prediction.git
+   cd Titanic-Survivor-Prediction
    ```
 2. Install dependencies
    ```bash
-   pip install pandas numpy matplotlib scikit-learn jupyter
+   pip install -r requirements.txt
    ```
-3. Run the notebook
-   ```bash
-   jupyter notebook Titanic_Survivor_Prediction.ipynb
-   ```
+3. Open the notebook in VS Code
+   - Open the folder in VS Code
+   - Open `Titanic Survivor Prediction.ipynb`
+   - Select a Python kernel (top right) and run the cells
 
 ---
 
