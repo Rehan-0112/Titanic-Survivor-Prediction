@@ -71,7 +71,24 @@ The `data/` folder is included in this repo, so the notebook should run out of t
 
 ## 📊 Results
 
-The final Random Forest model, after hyperparameter tuning, gave a solid improvement over the baseline. (Add your final accuracy score here once you note it down!)
+After hyperparameter tuning with `RandomizedSearchCV` followed by a focused `GridSearchCV`, the final Random Forest model achieved:
+
+| Metric | Score |
+|---|---|
+| Train Accuracy | 83.43% |
+| Test Accuracy | 82.68% |
+
+**Best hyperparameters found:**
+```
+criterion: gini
+n_estimators: 210
+max_depth: 44
+max_features: sqrt
+max_samples: 0.603
+min_samples_split: 15
+```
+
+The close gap between train and test accuracy suggests the model generalizes well without significant overfitting.
 
 ---
 
@@ -114,6 +131,6 @@ The final Random Forest model, after hyperparameter tuning, gave a solid improve
 ## 👤 Author
 
 **Rehan**
-B.Tech Data Science (S.Y.) Student
+B.Tech Data Science Student
 
 Feel free to connect or drop suggestions — always open to feedback as I'm still learning! 🙂
