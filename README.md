@@ -4,6 +4,8 @@ A machine learning project that predicts whether a passenger survived the Titani
 
 This project was made as a part of my journey learning ML — combining what I picked up from pandas/NumPy practice with concepts from supervised learning (classification, hyperparameter tuning, etc).
 
+🔗 **Live Demo:** [Try it on Streamlit](https://your-app-link.streamlit.app) *(replace this link once deployed)*
+
 ---
 
 ## 📌 Project Overview
@@ -42,6 +44,8 @@ The `data/` folder is included in this repo, so the notebook should run out of t
 - **Matplotlib** – visualization
 - **Scikit-learn** – modeling & hyperparameter tuning
 - **Jupyter Notebook**
+- **Streamlit** – for the web app where you can actually test predictions
+- **Joblib** – to save/load the trained model, scaler, and encoders
 
 ---
 
@@ -92,6 +96,21 @@ The close gap between train and test accuracy suggests the model generalizes wel
 
 ---
 
+## 🖥️ Web App
+
+I also wrapped this up into a small Streamlit app so the model isn't just sitting in a notebook — you can actually punch in passenger details (class, age, fare, etc.) and get a survival prediction with probability.
+
+Behind the scenes it loads the saved model, scaler, and label encoders (`model.pkl`, `scaler.pkl`, `label_encoders.pkl`, `feature_columns.pkl` in the `models/` folder) and runs the same preprocessing steps used during training, so the predictions match what the notebook would give.
+
+To run it locally:
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+It'll open in your browser at `localhost:8501`.
+
+---
+
 ## 🚀 How to Run
 
 1. Clone this repo
@@ -107,6 +126,7 @@ The close gap between train and test accuracy suggests the model generalizes wel
    - Open the folder in VS Code
    - Open `Titanic Survivor Prediction.ipynb`
    - Select a Python kernel (top right) and run the cells
+4. Or just run the web app directly (see Web App section below) if you don't want to touch the notebook
 
 ---
 
@@ -116,6 +136,7 @@ The close gap between train and test accuracy suggests the model generalizes wel
 - Why feature engineering (like extracting titles, family size, fare-per-ticket) often matters more than the model itself
 - The difference between Label Encoding and One-Hot Encoding, and when to use each
 - How `RandomizedSearchCV` and `GridSearchCV` work together for efficient hyperparameter tuning
+- That deploying a model is its own challenge — had to make sure the Streamlit app's preprocessing exactly matched the notebook's, otherwise predictions would be wrong even with the same model
 
 ---
 
@@ -124,13 +145,13 @@ The close gap between train and test accuracy suggests the model generalizes wel
 - Try other models (XGBoost, Logistic Regression) and compare performance
 - Use cross-validation more extensively to validate tuning results
 - Explore more advanced feature engineering (e.g., surname-based family grouping)
-- Deploy the model with a simple Streamlit/Flask interface
+- Add input validation on the Streamlit app so it handles edge cases better
 
 ---
 
 ## 👤 Author
 
 **Rehan**
-B.Tech Data Science Student
+B.Tech Data Science (S.Y.) Student
 
 Feel free to connect or drop suggestions — always open to feedback as I'm still learning! 🙂
