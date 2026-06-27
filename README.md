@@ -4,7 +4,7 @@ A machine learning project that predicts whether a passenger survived the Titani
 
 This project was made as a part of my journey learning ML — combining what I picked up from pandas/NumPy practice with concepts from supervised learning (classification, hyperparameter tuning, etc).
 
-🔗 **Live Demo:** [Try it on Streamlit](https://your-app-link.streamlit.app) *(replace this link once deployed)*
+🔗 https://titanic-survivor-prediction-kcxejdy2vs9lrqy7s6f4kw.streamlit.app/
 
 ---
 
